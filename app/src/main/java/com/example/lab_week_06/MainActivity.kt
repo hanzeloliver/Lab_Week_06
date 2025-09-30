@@ -27,33 +27,21 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = catAdapter
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
-        // 🟢 Tambahkan ItemTouchHelper untuk swipe delete
         val itemTouchHelper = ItemTouchHelper(catAdapter.swipeToDeleteCallback)
         itemTouchHelper.attachToRecyclerView(recyclerView)
 
         catAdapter.setData(
             listOf(
-                CatModel(
-                    Gender.Male,
-                    CatBreed.BalineseJavanese,
-                    "Fred",
-                    "Silent and deadly",
-                    "https://cdn2.thecatapi.com/images/7dj.jpg"
-                ),
-                CatModel(
-                    Gender.Female,
-                    CatBreed.ExoticShorthair,
-                    "Wilma",
-                    "Cuddly assassin",
-                    "https://cdn2.thecatapi.com/images/egv.jpg"
-                ),
-                CatModel(
-                    Gender.Unknown,
-                    CatBreed.AmericanCurl,
-                    "Curious George",
-                    "Award winning investigator",
-                    "https://cdn2.thecatapi.com/images/bar.jpg"
-                )
+                CatModel(Gender.Male, CatBreed.BalineseJavanese, "Fred", "Silent and deadly", "https://cdn2.thecatapi.com/images/7dj.jpg"),
+                CatModel(Gender.Female, CatBreed.ExoticShorthair, "Wilma", "Cuddly assassin", "https://cdn2.thecatapi.com/images/egv.jpg"),
+                CatModel(Gender.Unknown, CatBreed.AmericanCurl, "Curious George", "Award winning investigator", "https://cdn2.thecatapi.com/images/bar.jpg"),
+                CatModel(Gender.Male, CatBreed.AmericanCurl, "Tommy", "Always curious", "https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg"),
+                CatModel(Gender.Female, CatBreed.BalineseJavanese, "Luna", "Loves to sleep", "https://cdn2.thecatapi.com/images/c9a.jpg"),
+                CatModel(Gender.Male, CatBreed.ExoticShorthair, "Leo", "Playful and happy", "https://cdn2.thecatapi.com/images/bpc.jpg"),
+                CatModel(Gender.Female, CatBreed.AmericanCurl, "Mimi", "Queen of the house", "https://cdn2.thecatapi.com/images/MTk2Nzg0OQ.jpg"),
+                CatModel(Gender.Unknown, CatBreed.ExoticShorthair, "Shadow", "Silent observer", "https://cdn2.thecatapi.com/images/d5h.jpg"),
+                CatModel(Gender.Male, CatBreed.BalineseJavanese, "Oscar", "Always hungry", "https://cdn2.thecatapi.com/images/131.jpg"),
+                CatModel(Gender.Female, CatBreed.AmericanCurl, "Bella", "Sweet and charming", "https://cdn2.thecatapi.com/images/MTY3ODIyMw.jpg")
             )
         )
     }
